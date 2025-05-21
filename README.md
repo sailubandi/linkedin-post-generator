@@ -10,9 +10,10 @@ This is a Flask application that generates professional LinkedIn posts using the
   ```bash
   ollama pull llama-3.2
 
+```
 
-
-  #command to run file
+  ##command to run file
+ ```bash
  - source venv/bin/activate
  - pip install -r requirements.txt
  - python -m venv venv
