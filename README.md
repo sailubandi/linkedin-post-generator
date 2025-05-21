@@ -12,10 +12,12 @@ This is a Flask application that generates professional LinkedIn posts using the
 
 ```
 
-  ##command to run file
+  #command to run file
+
  ```bash
  - source venv/bin/activate
  - pip install -r requirements.txt
  - python -m venv venv
  - venv\Scripts\activate
  - python run.py  
+```
