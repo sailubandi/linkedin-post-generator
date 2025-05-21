@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LinkedIn Post Generator</title>
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            max-width: 600px; /* Reduced max-width */
+            margin: 40px auto; /* Reduced margin */
+            padding: 15px; /* Reduced padding */
+            background: #f4f7f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+            border-radius: 10px; /* Slightly reduced border radius */
+            padding: 20px; /* Reduced padding */
+            text-align: center;
+            margin-bottom: 30px; /* Reduced margin */
+        }
+
+        header h1 {
+            font-size: 2.5rem; /* Reduced font size */
+            color: #ffffff;
+            margin: 0;
+            letter-spacing: 1px; /* Reduced letter spacing */
+        }
+
+        header h2 {
+            font-size: 1rem; /* Reduced font size */
+            color: #d0e7f9;
+            margin-top: 5px; /* Reduced margin */
+            font-style: italic;
+        }
+
+        form {
+            margin-bottom: 15px; /* Reduced margin */
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px; /* Reduced margin */
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px; /* Reduced padding */
+            margin-bottom: 10px; /* Reduced margin */
+            border: 2px solid #0077b5;
+            border-radius: 5px; /* Reduced border radius */
+        }
+
+        button {
+            background-color: #0077b5;
+            color: white;
+            padding: 10px 20px; /* Reduced padding */
+            border: none;
+            border-radius: 5px; /* Reduced border radius */
+            cursor: pointer;
+            font-weight: bold;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: #005f8d;
+        }
+
+        pre {
+            background: #e5f1fb;
+            padding: 10px; /* Reduced padding */
+            border-left: 4px solid #0077b5; /* Reduced border size */
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LinkedIn Post Generator</h1>
+        <h2>Powered by Llama 3.2</h2>
+    </header>
+
+    <form method="POST" action="/generate_post">
+        <label for="topic">Enter your LinkedIn Post Topic:</label>
+        <input type="text" id="topic" name="topic" placeholder="E.g., AI in healthcare" required />
+        <button type="submit">Generate Post</button>
+    </form>
+
+    {% if linkedin_post %}
+        <h2>Generated LinkedIn Post:</h2>
+        <pre>{{ linkedin_post }}</pre>
+    {% endif %}
+</body>
+</html>
